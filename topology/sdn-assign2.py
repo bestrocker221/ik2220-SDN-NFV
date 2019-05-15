@@ -164,6 +164,8 @@ if __name__ == "__main__":
 	
 	print("[lb1] Spawning testing DNS server on LoadBalancer 100.0.0.25")
 	net.get("lb1").cmd("sudo python dns_server.py 100.0.0.25 5353 &")
+	# needed because for some reason resolv.conf get a wrong entry making dns resolutin crash
+	net.get("lb1").cmd("echo nameserver 1.1.1.1 > /etc/resolv.conf")
 
 	#CLI(net)
 	#net.stop()

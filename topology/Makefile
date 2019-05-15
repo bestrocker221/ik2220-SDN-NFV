@@ -1,7 +1,7 @@
 app: topo test clean
 
-topo: sdn-assign1.py
-	sudo python2 sdn-assign1.py
+topo: sdn-assign2.py
+	sudo python2 sdn-assign2.py
 
 clean:
 	sudo mn -c
