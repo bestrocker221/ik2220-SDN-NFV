@@ -1,0 +1,142 @@
+2019-04-13 14:27:25,854 ####### STARTING TESTS #######  
+2019-04-13 14:27:25,855 [PING TEST] external h2 to internal 100.0.0.51 must NOT work: 
+2019-04-13 14:27:26,860  OK!
+2019-04-13 14:27:26,860 [PING TEST] external h2 to internal 100.0.0.52 must NOT work: 
+2019-04-13 14:27:27,867  OK!
+2019-04-13 14:27:27,867 [PING TEST] external h2 to internal 100.0.0.42 must NOT work: 
+2019-04-13 14:27:28,879  OK!
+2019-04-13 14:27:28,880 [PING TEST] external h2 to internal 100.0.0.41 must NOT work: 
+2019-04-13 14:27:29,889  OK!
+2019-04-13 14:27:29,889 [PING TEST] external h2 to internal 100.0.0.40 must NOT work: 
+2019-04-13 14:27:30,898  OK!
+2019-04-13 14:27:30,899 [PING TEST] external h2 to internal 100.0.0.21 must NOT work: 
+2019-04-13 14:27:31,907  OK!
+2019-04-13 14:27:31,907 [PING TEST] external h2 to internal 100.0.0.20 must NOT work: 
+2019-04-13 14:27:32,916  OK!
+2019-04-13 14:27:32,916 [PING TEST] external h2 to internal 100.0.0.22 must NOT work: 
+2019-04-13 14:27:33,925  OK!
+2019-04-13 14:27:33,925 [DNS TEST] external h2 to internal DNS 100.0.0.20 must work: 
+2019-04-13 14:27:34,015  OK!
+2019-04-13 14:27:34,015 [DNS BOGUS TEST] external h2 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-04-13 14:27:35,026  OK!
+2019-04-13 14:27:35,027 [DNS TEST] external h2 to internal DNS 100.0.0.21 must work: 
+2019-04-13 14:27:35,138  OK!
+2019-04-13 14:27:35,138 [DNS BOGUS TEST] external h2 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-04-13 14:27:36,167  OK!
+2019-04-13 14:27:36,168 [DNS TEST] external h2 to internal DNS 100.0.0.22 must work: 
+2019-04-13 14:27:36,213  OK!
+2019-04-13 14:27:36,213 [DNS BOGUS TEST] external h2 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-04-13 14:27:37,235  OK!
+2019-04-13 14:27:37,235 [WEB TEST] external h2 to internal WEB 100.0.0.40 must work: 
+2019-04-13 14:27:37,292  OK!
+2019-04-13 14:27:37,292 [WEB BOGUS TEST] external h2 to internal WEB 100.0.0.40 must NOT work: 
+2019-04-13 14:27:38,299  OK!
+2019-04-13 14:27:38,299 [WEB TEST] external h2 to internal WEB 100.0.0.41 must work: 
+2019-04-13 14:27:38,372  OK!
+2019-04-13 14:27:38,372 [WEB BOGUS TEST] external h2 to internal WEB 100.0.0.41 must NOT work: 
+2019-04-13 14:27:39,384  OK!
+2019-04-13 14:27:39,384 [WEB TEST] external h2 to internal WEB 100.0.0.42 must work: 
+2019-04-13 14:27:39,437  OK!
+2019-04-13 14:27:39,438 [WEB BOGUS TEST] external h2 to internal WEB 100.0.0.42 must NOT work: 
+2019-04-13 14:27:40,446  OK!
+2019-04-13 14:27:40,447 [PING TEST] external h1 to internal 100.0.0.51 must NOT work: 
+2019-04-13 14:27:41,456  OK!
+2019-04-13 14:27:41,456 [PING TEST] external h1 to internal 100.0.0.52 must NOT work: 
+2019-04-13 14:27:42,466  OK!
+2019-04-13 14:27:42,466 [PING TEST] external h1 to internal 100.0.0.42 must NOT work: 
+2019-04-13 14:27:43,481  OK!
+2019-04-13 14:27:43,481 [PING TEST] external h1 to internal 100.0.0.41 must NOT work: 
+2019-04-13 14:27:44,491  OK!
+2019-04-13 14:27:44,492 [PING TEST] external h1 to internal 100.0.0.40 must NOT work: 
+2019-04-13 14:27:45,502  OK!
+2019-04-13 14:27:45,503 [PING TEST] external h1 to internal 100.0.0.21 must NOT work: 
+2019-04-13 14:27:46,512  OK!
+2019-04-13 14:27:46,512 [PING TEST] external h1 to internal 100.0.0.20 must NOT work: 
+2019-04-13 14:27:47,525  OK!
+2019-04-13 14:27:47,525 [PING TEST] external h1 to internal 100.0.0.22 must NOT work: 
+2019-04-13 14:27:48,532  OK!
+2019-04-13 14:27:48,533 [DNS TEST] external h1 to internal DNS 100.0.0.20 must work: 
+2019-04-13 14:27:48,574  OK!
+2019-04-13 14:27:48,574 [DNS BOGUS TEST] external h1 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-04-13 14:27:49,586  OK!
+2019-04-13 14:27:49,587 [DNS TEST] external h1 to internal DNS 100.0.0.21 must work: 
+2019-04-13 14:27:49,652  OK!
+2019-04-13 14:27:49,653 [DNS BOGUS TEST] external h1 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-04-13 14:27:50,671  OK!
+2019-04-13 14:27:50,671 [DNS TEST] external h1 to internal DNS 100.0.0.22 must work: 
+2019-04-13 14:27:50,754  OK!
+2019-04-13 14:27:50,754 [DNS BOGUS TEST] external h1 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-04-13 14:27:51,765  OK!
+2019-04-13 14:27:51,765 [WEB TEST] external h1 to internal WEB 100.0.0.40 must work: 
+2019-04-13 14:27:51,818  OK!
+2019-04-13 14:27:51,818 [WEB BOGUS TEST] external h1 to internal WEB 100.0.0.40 must NOT work: 
+2019-04-13 14:27:52,826  OK!
+2019-04-13 14:27:52,826 [WEB TEST] external h1 to internal WEB 100.0.0.41 must work: 
+2019-04-13 14:27:52,915  OK!
+2019-04-13 14:27:52,915 [WEB BOGUS TEST] external h1 to internal WEB 100.0.0.41 must NOT work: 
+2019-04-13 14:27:53,927  OK!
+2019-04-13 14:27:53,928 [WEB TEST] external h1 to internal WEB 100.0.0.42 must work: 
+2019-04-13 14:27:53,971  OK!
+2019-04-13 14:27:53,971 [WEB BOGUS TEST] external h1 to internal WEB 100.0.0.42 must NOT work: 
+2019-04-13 14:27:54,977  OK!
+2019-04-13 14:27:54,977 [PING TEST] internal h3 to external h2 must work: 
+2019-04-13 14:27:55,127  OK!
+2019-04-13 14:27:55,127 [PING TEST] internal h3 to external h1 must work: 
+2019-04-13 14:27:55,270  OK!
+2019-04-13 14:27:55,271 [DNS TEST] internal h3 to internal DNS 100.0.0.20 must work: 
+2019-04-13 14:27:55,402  OK!
+2019-04-13 14:27:55,402 [DNS BOGUS TEST] internal h3 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-04-13 14:27:56,429  OK!
+2019-04-13 14:27:56,430 [DNS TEST] internal h3 to internal DNS 100.0.0.21 must work: 
+2019-04-13 14:27:56,479  OK!
+2019-04-13 14:27:56,480 [DNS BOGUS TEST] internal h3 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-04-13 14:27:57,491  OK!
+2019-04-13 14:27:57,492 [DNS TEST] internal h3 to internal DNS 100.0.0.22 must work: 
+2019-04-13 14:27:57,546  OK!
+2019-04-13 14:27:57,547 [DNS BOGUS TEST] internal h3 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-04-13 14:27:58,562  OK!
+2019-04-13 14:27:58,562 [WEB TEST] internal h3 to internal WEB 100.0.0.40 must work: 
+2019-04-13 14:27:58,637  OK!
+2019-04-13 14:27:58,637 [WEB BOGUS TEST] internal h3 to internal WEB 100.0.0.40 must NOT work: 
+2019-04-13 14:27:59,647  OK!
+2019-04-13 14:27:59,647 [WEB TEST] internal h3 to internal WEB 100.0.0.41 must work: 
+2019-04-13 14:27:59,727  OK!
+2019-04-13 14:27:59,728 [WEB BOGUS TEST] internal h3 to internal WEB 100.0.0.41 must NOT work: 
+2019-04-13 14:28:00,737  OK!
+2019-04-13 14:28:00,737 [WEB TEST] internal h3 to internal WEB 100.0.0.42 must work: 
+2019-04-13 14:28:00,999  OK!
+2019-04-13 14:28:00,999 [WEB BOGUS TEST] internal h3 to internal WEB 100.0.0.42 must NOT work: 
+2019-04-13 14:28:02,017  OK!
+2019-04-13 14:28:02,017 [PING TEST] internal h4 to external h2 must work: 
+2019-04-13 14:28:02,192  OK!
+2019-04-13 14:28:02,193 [PING TEST] internal h4 to external h1 must work: 
+2019-04-13 14:28:02,364  OK!
+2019-04-13 14:28:02,365 [DNS TEST] internal h4 to internal DNS 100.0.0.20 must work: 
+2019-04-13 14:28:02,415  OK!
+2019-04-13 14:28:02,415 [DNS BOGUS TEST] internal h4 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-04-13 14:28:03,425  OK!
+2019-04-13 14:28:03,425 [DNS TEST] internal h4 to internal DNS 100.0.0.21 must work: 
+2019-04-13 14:28:03,545  OK!
+2019-04-13 14:28:03,545 [DNS BOGUS TEST] internal h4 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-04-13 14:28:04,568  OK!
+2019-04-13 14:28:04,569 [DNS TEST] internal h4 to internal DNS 100.0.0.22 must work: 
+2019-04-13 14:28:04,652  OK!
+2019-04-13 14:28:04,652 [DNS BOGUS TEST] internal h4 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-04-13 14:28:05,665  OK!
+2019-04-13 14:28:05,666 [WEB TEST] internal h4 to internal WEB 100.0.0.40 must work: 
+2019-04-13 14:28:05,716  OK!
+2019-04-13 14:28:05,716 [WEB BOGUS TEST] internal h4 to internal WEB 100.0.0.40 must NOT work: 
+2019-04-13 14:28:06,724  OK!
+2019-04-13 14:28:06,724 [WEB TEST] internal h4 to internal WEB 100.0.0.41 must work: 
+2019-04-13 14:28:06,789  OK!
+2019-04-13 14:28:06,789 [WEB BOGUS TEST] internal h4 to internal WEB 100.0.0.41 must NOT work: 
+2019-04-13 14:28:07,797  OK!
+2019-04-13 14:28:07,798 [WEB TEST] internal h4 to internal WEB 100.0.0.42 must work: 
+2019-04-13 14:28:07,852  OK!
+2019-04-13 14:28:07,853 [WEB BOGUS TEST] internal h4 to internal WEB 100.0.0.42 must NOT work: 
+2019-04-13 14:28:08,860  OK!
+2019-04-13 14:28:08,860 
+RESULTS:
+2019-04-13 14:28:08,860 	TOTAL SCORE 68/68
+
+2019-04-13 14:28:08,861 ####### ENDING TESTS   #######  
