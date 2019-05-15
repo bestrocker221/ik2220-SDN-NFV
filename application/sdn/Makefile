@@ -6,4 +6,4 @@ MODULE:=my_controller
 app: start
 
 start:
-	$(POX_APP) $(MODULE)
+	sudo $(POX_APP) $(MODULE)

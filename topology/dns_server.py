@@ -7,7 +7,7 @@ DNS_SERVER_PORT = int(sys.argv[2])
 
 dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 dns_socket.bind((DNS_SERVER_IP, DNS_SERVER_PORT))
-print(f"Forwarding DNS queries to local {DNS_SERVER_IP}:{DNS_SERVER_PORT} IP")
+print("Forwarding DNS queries to local {}:{} IP".format(DNS_SERVER_IP,DNS_SERVER_PORT))
 
 #print("UDP socket ready.")
 
@@ -17,7 +17,7 @@ while True:
 	pkt = DNS(data)
 	
 	if pkt and pkt.haslayer(DNS):
-		print(f"Got DNS query for: {pkt[DNSQR].qname} from {addr[0]}")
+		print("Got DNS query for: {} from {}".format(pkt[DNSQR].qname,addr[0]))
 
 		# Generate a simple response with the DNS server IP as response.
 		spf_resp = DNS(id=pkt.id, qr=1, ancount=1, \
