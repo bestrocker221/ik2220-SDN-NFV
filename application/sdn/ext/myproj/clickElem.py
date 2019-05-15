@@ -37,7 +37,7 @@ class click_device (object):
 				args = "sudo /usr/local/bin/click -f " + click_path + "/lb.click int_if=lb2-eth2 ext_if=lb2-eth1 sw_ip=100.0.0.45 s1=100.0.0.40 s2=100.0.0.41 s3=100.0.0.42 port=80 proto=tcp lb=2"
 			# launch ids
 			elif event.dpid == 73:
-				args = "sudo /usr/local/bin/click -f " + click_path + "/ids.click int_if=ids-eth3 ext_if=ids-eth1 insp_if=ids_eth2"
+				args = "sudo /usr/local/bin/click -f " + click_path + "/ids.click int_if=ids-eth3 ext_if=ids-eth1 insp_if=ids-eth2"
 			# launch napt
 			elif event.dpid == 74:
 				args = "sudo /usr/local/bin/click -f " + click_path + "/nat.click int_if=napt-eth2 ext_if=napt-eth5"

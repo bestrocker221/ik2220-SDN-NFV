@@ -167,10 +167,10 @@ if __name__ == "__main__":
 	# needed because for some reason resolv.conf get a wrong entry making dns resolutin crash
 	net.get("lb1").cmd("echo nameserver 1.1.1.1 > /etc/resolv.conf")
 
-	#CLI(net)
-	#net.stop()
-	#import sys
-	#sys.exit(0)
+	CLI(net)
+	net.stop()
+	import sys
+	sys.exit(0)
 
 	################
 	#### TEST

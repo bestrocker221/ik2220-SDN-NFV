@@ -14,7 +14,7 @@ define (//$sw_int_ip 10.0.0.1,
 counter_in1, counter_in2, counter_out1, counter_out2 :: AverageCounter;
 arp_1, ip1 :: Counter;
 arp_2, ip2 :: Counter;
-to_drop1, to_drop2, to_drop3, to_drop4 :: Counter;
+to_drop1, to_drop2 :: Counter;
 counter_insp :: Counter;
 
 // setup ifaces
@@ -76,7 +76,7 @@ from_int -> counter_in1 -> int_cl;
 
 int_cl[0] -> arp_1 -> to_ext_queue;
 int_cl[1] -> ip1 -> to_ext_queue;
-int_cl[2] -> Discard;
+int_cl[2] -> to_drop1 -> Discard;
 
 
 // FROM OUT TO IN
@@ -84,7 +84,7 @@ int_cl[2] -> Discard;
 from_ext -> counter_in2 -> ext_cl_first;
 
 ext_cl_first[0] -> arp_2 -> to_int_queue;
-ext_cl_first[2] -> Discard;
+ext_cl_first[2] -> to_drop2 -> Discard;
 
 //second round
 ext_cl_first[1] -> ip2 -> ext_cl_second;  //icmp
@@ -137,7 +137,7 @@ DriverManager(wait , print > ../../results/ids.counter  "
 
 	Total # of input packets: $(add $(counter_in1.count) $(counter_in2.count))
 	Total # of output packets: $(add $(counter_out1.count) $(counter_out2.count))
-	Total # of dropped packets: $(add $(to_drop1.count) $(to_drop2.count) $(to_drop3.count) $(to_drop4.count) )
+	Total # of dropped packets: $(add $(to_drop1.count) $(to_drop2.count) )
 	Total # of packets to inspector: $(counter_insp)
 	==================================================
 " , stop);

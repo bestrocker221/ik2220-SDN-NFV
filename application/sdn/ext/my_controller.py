@@ -23,7 +23,7 @@ if os.getuid() != 0:
 
 def launch():
 	fw_list_dpid = [51, 52]
-	click_dpid = [71,72, 74]
+	click_dpid = [71,72,73, 74]
 
 
 	private_ip_hosts = ["10.0.0.50", "10.0.0.51"]
