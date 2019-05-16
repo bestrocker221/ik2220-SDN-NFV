@@ -1,14 +1,3 @@
-//define ($sw_ip 100.0.0.45,
-//		$s1 100.0.0.40,
-//		$s2 100.0.0.41,
-//		$s3 100.0.0.42,
-//		$proto tcp,
-//		$port 80,
-//		$lb 1
-//		)
-
-
-
 // 1 in, 2 out
 counter_in1, counter_in2, counter_out1, counter_out2 :: AverageCounter;
 arp_req1, arp_res1, icmp1, ip1 :: Counter;

@@ -49,5 +49,5 @@ class click_device (object):
 
 	def _handle_ConnectionDown(self, event):
 		if event.dpid in self.clicks_dpids:
-			self.click_proc.terminate()
+			#self.click_proc.terminate()
 			log.debug("[CLICK: {}] Terminating..".format(event.dpid))
