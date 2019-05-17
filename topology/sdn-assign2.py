@@ -180,25 +180,18 @@ if __name__ == "__main__":
 	# needed because for some reason resolv.conf get a wrong entry making dns resolution crash
 	net.get("lb1").cmd("echo nameserver 1.1.1.1 > /etc/resolv.conf")
 
-	# start tcpdump on ids
 	print("[INSP] Starting TCPDUMP for traffic capture on insp machine")
 	
-	net.get("insp").sendCmd("tcpdump -i insp-eth0 -vvv tcp -w ../results/ids_capture.pcap")	
-	# about the tcpdump:
-	# tried everything to make it work but maybe its my machine problem, in other colleagues it works flawlessly
-	# tcpdump does not actually start since i don't run another command into the CLI with "insp <cmd>"
-	# If and only into the CLI i run "insp ps" (ps for example) then i see tcpdump starting, 
-	# and that is why in the capture does not save anything. 
-	#
-	# For the project i manually did the capture and sent a couple of test packets
-	net.get("h1").cmd(" h1 curl 100.0.0.45 -m1 -s  >/dev/null; echo $?")
-	CLI(net)
+	net.get("insp").cmd("tcpdump -i insp-eth0 -vvv tcp -w ../results/ids_capture.pcap &")	
 
-	net.get("insp").cmd('kill -s SIGINT $(ps | grep tcpdump | awk \'{print $1}\')')
-	
-	net.stop()
-	import sys
-	sys.exit(0)
+	# TESTING
+	#
+	#print(net.get("h1").cmd("curl 100.0.0.45 -m1 -s -X HEAD"))
+	#CLI(net)
+	#net.get("insp").cmd('kill -s SIGINT $(ps aux | grep tcpdump | awk \'{print $2}\')')
+	#net.stop()
+	#import sys
+	#sys.exit(0)
 
 	################
 	#### TEST
@@ -227,14 +220,16 @@ if __name__ == "__main__":
 	## common tests from all hosts
 	for h in all_hosts_obj:
 		h = net.get(h)
+		
 		for test_ip in all_servers:
 			info("[PING TEST] host {} to server {} must NOT work: ".format( h, test_ip)),
-			res = int(h.cmd('ping -c 1 -W 1 {}'.format(test_ip) + '> /dev/null; echo $?'))
+			res = int(h.cmd('ping -c 1 -W 1 {}'.format(test_ip) + ' > /dev/null; echo $?'))
 			info( ok() if res != 0 else err() )
 
 		for lb_ip in [srv_list["web_lb"], srv_list["dns_lb"]]:
 			info("[PING TEST] host {} to LoadBalancer {} must work: ".format( h, lb_ip)),
 			res = int(h.cmd('ping -c 1 -W 1 {}'.format(lb_ip) + '> /dev/null; echo $?'))
+			print('ping -c 1 -W 1 {}'.format(lb_ip) + ' > /dev/null; echo $?')
 			info( ok() if res == 0 else err() )
 
 		### DNS TESTING
@@ -267,7 +262,7 @@ if __name__ == "__main__":
 			info("[WEB BOGUS TEST] host {} to internal BOGUS WEB {} must NOT work: ".format( h, web_ip)),
 			res = int(h.cmd('curl --connect-timeout 1 {}:8080'.format(web_ip) + ' -s | grep DOCTYPE | wc | awk \'{print $1}\''))
 			info( ok() if res == 0 else err())
-
+		
 		# bogus WEB port
 		info("[WEB BOGUS TEST] host {} to BOGUS WEB LoadBalancer {} must NOT work: ".format( h, srv_list["web_lb"])),
 		res = int(h.cmd('curl --connect-timeout 1 {}:8080'.format(srv_list["web_lb"]) + ' -s | grep DOCTYPE | wc | awk \'{print $1}\''))
@@ -277,7 +272,7 @@ if __name__ == "__main__":
 		# Testing methods that must go to the insp
 		for http_rtype in http_block:
 			info("[WEB TEST] host {} to  WEB LoadBalancer {} HTTP {} must NOT work: ".format( h, srv_list["web_lb"], http_rtype) )
-			res = int(h.cmd("curl {} -m1 -s -X {} >/dev/null; echo $?".format(srv_list["dns_lb"], http_rtype)))
+			res = int(h.cmd("curl {} -m1 -s -X {} >/dev/null; echo $?".format(srv_list["web_lb"], http_rtype)))
 			info( ok() if res != 0 else err())
 
 		# TESTING POST/PUT, must work
@@ -288,7 +283,7 @@ if __name__ == "__main__":
 		# TESTING PUT INJECTION
 		for inj in injections:
 			info("[WEB TEST INJ] host {} to  WEB LoadBalancer {} HTTP {} inj: {} must NOT work: ".format( h, srv_list["web_lb"], http_rtype, inj) )
-			res = int(h.cmd("curl {} -m1 -s -X PUT --data \"{}\" >/dev/null; echo $?".format(srv_list["dns_lb"], inj)))
+			res = int(h.cmd("curl {} -m1 -s -X PUT --data \"{}\" >/dev/null; echo $?".format(srv_list["web_lb"], inj)))
 			info( ok() if res != 0 else err())
 	#############################################
 	# NOW TESTING FROM THE EXTERNAL
@@ -324,7 +319,8 @@ if __name__ == "__main__":
 	##############
 
 	CLI(net)
-	net.get("insp").cmd('kill -s SIGINT $(ps | grep tcpdump | awk \'{print $1}\')')
+	net.get("insp").cmd('kill -s SIGINT $(ps aux | grep tcpdump | awk \'{print $2}\')')
+	# pgrep tcpdump
 	net.stop()
 
 	#sudo ovs-vsctl show

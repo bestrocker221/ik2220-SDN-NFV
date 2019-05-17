@@ -1,0 +1,312 @@
+2019-05-17 18:02:33,627 ####### STARTING TESTS #######  
+2019-05-17 18:02:33,627 [PING TEST] host h3 to server 100.0.0.20 must NOT work: 
+2019-05-17 18:02:34,632  OK!
+2019-05-17 18:02:34,632 [PING TEST] host h3 to server 100.0.0.21 must NOT work: 
+2019-05-17 18:02:35,637  OK!
+2019-05-17 18:02:35,638 [PING TEST] host h3 to server 100.0.0.22 must NOT work: 
+2019-05-17 18:02:36,652  OK!
+2019-05-17 18:02:36,652 [PING TEST] host h3 to server 100.0.0.40 must NOT work: 
+2019-05-17 18:02:37,665  OK!
+2019-05-17 18:02:37,665 [PING TEST] host h3 to server 100.0.0.41 must NOT work: 
+2019-05-17 18:02:38,677  OK!
+2019-05-17 18:02:38,678 [PING TEST] host h3 to server 100.0.0.42 must NOT work: 
+2019-05-17 18:02:39,690  OK!
+2019-05-17 18:02:39,691 [PING TEST] host h3 to LoadBalancer 100.0.0.45 must work: 
+2019-05-17 18:02:39,878  OK!
+2019-05-17 18:02:39,879 [PING TEST] host h3 to LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:02:40,052  OK!
+2019-05-17 18:02:40,053 [DNS TEST] host h3 to internal DNS 100.0.0.20 must NOT work: 
+2019-05-17 18:02:41,088  OK!
+2019-05-17 18:02:41,088 [DNS BOGUS TEST] host h3 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-05-17 18:02:42,117  OK!
+2019-05-17 18:02:42,117 [DNS TEST] host h3 to internal DNS 100.0.0.21 must NOT work: 
+2019-05-17 18:02:43,128  OK!
+2019-05-17 18:02:43,128 [DNS BOGUS TEST] host h3 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-05-17 18:02:44,152  OK!
+2019-05-17 18:02:44,153 [DNS TEST] host h3 to internal DNS 100.0.0.22 must NOT work: 
+2019-05-17 18:02:45,182  OK!
+2019-05-17 18:02:45,182 [DNS BOGUS TEST] host h3 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-05-17 18:02:46,212  OK!
+2019-05-17 18:02:46,212 [DNS TEST] host h3 to DNS LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:02:46,438  OK!
+2019-05-17 18:02:46,439 [DNS BOGUS TEST] internal h3 to internal DNS LoadBalancer port 5353 100.0.0.25 must NOT work: 
+2019-05-17 18:02:47,469  OK!
+2019-05-17 18:02:47,469 [WEB TEST] host h3 to internal WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:02:48,486  OK!
+2019-05-17 18:02:48,487 [WEB BOGUS TEST] host h3 to internal BOGUS WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:02:49,505  OK!
+2019-05-17 18:02:49,505 [WEB TEST] host h3 to internal WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:02:50,523  OK!
+2019-05-17 18:02:50,523 [WEB BOGUS TEST] host h3 to internal BOGUS WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:02:51,544  OK!
+2019-05-17 18:02:51,544 [WEB TEST] host h3 to internal WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:02:52,564  OK!
+2019-05-17 18:02:52,564 [WEB BOGUS TEST] host h3 to internal BOGUS WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:02:53,585  OK!
+2019-05-17 18:02:53,585 [WEB BOGUS TEST] host h3 to BOGUS WEB LoadBalancer 100.0.0.45 must NOT work: 
+2019-05-17 18:02:54,603  OK!
+2019-05-17 18:02:54,603 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP OPTIONS must NOT work: 
+2019-05-17 18:02:55,619  OK!
+2019-05-17 18:02:55,620 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP TRACE must NOT work: 
+2019-05-17 18:02:56,639  OK!
+2019-05-17 18:02:56,640 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP CONNECT must NOT work: 
+2019-05-17 18:02:57,653  OK!
+2019-05-17 18:02:57,653 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP DELETE must NOT work: 
+2019-05-17 18:02:58,659  OK!
+2019-05-17 18:02:58,660 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP HEAD must NOT work: 
+2019-05-17 18:02:59,676  OK!
+2019-05-17 18:02:59,676 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP GET must NOT work: 
+2019-05-17 18:03:00,691  OK!
+2019-05-17 18:03:00,691 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP POST must work: 
+2019-05-17 18:03:00,733  OK!
+2019-05-17 18:03:00,733 [WEB TEST] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT must work: 
+2019-05-17 18:03:00,760  OK!
+2019-05-17 18:03:00,760 [WEB TEST INJ] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /etc/passwd must NOT work: 
+2019-05-17 18:03:01,767  OK!
+2019-05-17 18:03:01,767 [WEB TEST INJ] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /var/log/ must NOT work: 
+2019-05-17 18:03:02,782  OK!
+2019-05-17 18:03:02,782 [WEB TEST INJ] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: INSERT must NOT work: 
+2019-05-17 18:03:03,797  OK!
+2019-05-17 18:03:03,798 [WEB TEST INJ] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: UPDATE must NOT work: 
+2019-05-17 18:03:04,812  OK!
+2019-05-17 18:03:04,812 [WEB TEST INJ] host h3 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: DELETE must NOT work: 
+2019-05-17 18:03:05,822  OK!
+2019-05-17 18:03:05,823 [PING TEST] host h4 to server 100.0.0.20 must NOT work: 
+2019-05-17 18:03:06,835  OK!
+2019-05-17 18:03:06,835 [PING TEST] host h4 to server 100.0.0.21 must NOT work: 
+2019-05-17 18:03:07,847  OK!
+2019-05-17 18:03:07,847 [PING TEST] host h4 to server 100.0.0.22 must NOT work: 
+2019-05-17 18:03:08,861  OK!
+2019-05-17 18:03:08,861 [PING TEST] host h4 to server 100.0.0.40 must NOT work: 
+2019-05-17 18:03:09,873  OK!
+2019-05-17 18:03:09,873 [PING TEST] host h4 to server 100.0.0.41 must NOT work: 
+2019-05-17 18:03:10,886  OK!
+2019-05-17 18:03:10,887 [PING TEST] host h4 to server 100.0.0.42 must NOT work: 
+2019-05-17 18:03:11,900  OK!
+2019-05-17 18:03:11,900 [PING TEST] host h4 to LoadBalancer 100.0.0.45 must work: 
+2019-05-17 18:03:12,907  ERROR!
+2019-05-17 18:03:12,907 [PING TEST] host h4 to LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:03:13,054  OK!
+2019-05-17 18:03:13,054 [DNS TEST] host h4 to internal DNS 100.0.0.20 must NOT work: 
+2019-05-17 18:03:14,062  OK!
+2019-05-17 18:03:14,062 [DNS BOGUS TEST] host h4 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-05-17 18:03:15,080  OK!
+2019-05-17 18:03:15,080 [DNS TEST] host h4 to internal DNS 100.0.0.21 must NOT work: 
+2019-05-17 18:03:16,101  OK!
+2019-05-17 18:03:16,101 [DNS BOGUS TEST] host h4 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-05-17 18:03:17,130  OK!
+2019-05-17 18:03:17,131 [DNS TEST] host h4 to internal DNS 100.0.0.22 must NOT work: 
+2019-05-17 18:03:18,143  OK!
+2019-05-17 18:03:18,143 [DNS BOGUS TEST] host h4 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-05-17 18:03:19,172  OK!
+2019-05-17 18:03:19,173 [DNS TEST] host h4 to DNS LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:03:19,378  OK!
+2019-05-17 18:03:19,379 [DNS BOGUS TEST] internal h4 to internal DNS LoadBalancer port 5353 100.0.0.25 must NOT work: 
+2019-05-17 18:03:20,412  OK!
+2019-05-17 18:03:20,413 [WEB TEST] host h4 to internal WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:03:21,434  OK!
+2019-05-17 18:03:21,434 [WEB BOGUS TEST] host h4 to internal BOGUS WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:03:22,452  OK!
+2019-05-17 18:03:22,453 [WEB TEST] host h4 to internal WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:03:23,474  OK!
+2019-05-17 18:03:23,474 [WEB BOGUS TEST] host h4 to internal BOGUS WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:03:24,492  OK!
+2019-05-17 18:03:24,493 [WEB TEST] host h4 to internal WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:03:25,513  OK!
+2019-05-17 18:03:25,513 [WEB BOGUS TEST] host h4 to internal BOGUS WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:03:26,532  OK!
+2019-05-17 18:03:26,533 [WEB BOGUS TEST] host h4 to BOGUS WEB LoadBalancer 100.0.0.45 must NOT work: 
+2019-05-17 18:03:27,552  OK!
+2019-05-17 18:03:27,552 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP OPTIONS must NOT work: 
+2019-05-17 18:03:28,569  OK!
+2019-05-17 18:03:28,570 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP TRACE must NOT work: 
+2019-05-17 18:03:29,586  OK!
+2019-05-17 18:03:29,587 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP CONNECT must NOT work: 
+2019-05-17 18:03:30,603  OK!
+2019-05-17 18:03:30,603 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP DELETE must NOT work: 
+2019-05-17 18:03:31,619  OK!
+2019-05-17 18:03:31,620 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP HEAD must NOT work: 
+2019-05-17 18:03:32,640  OK!
+2019-05-17 18:03:32,641 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP GET must NOT work: 
+2019-05-17 18:03:33,656  OK!
+2019-05-17 18:03:33,656 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP POST must work: 
+2019-05-17 18:03:33,723  OK!
+2019-05-17 18:03:33,724 [WEB TEST] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT must work: 
+2019-05-17 18:03:33,778  OK!
+2019-05-17 18:03:33,778 [WEB TEST INJ] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /etc/passwd must NOT work: 
+2019-05-17 18:03:34,794  OK!
+2019-05-17 18:03:34,795 [WEB TEST INJ] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /var/log/ must NOT work: 
+2019-05-17 18:03:35,808  OK!
+2019-05-17 18:03:35,808 [WEB TEST INJ] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: INSERT must NOT work: 
+2019-05-17 18:03:36,822  OK!
+2019-05-17 18:03:36,822 [WEB TEST INJ] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: UPDATE must NOT work: 
+2019-05-17 18:03:37,828  OK!
+2019-05-17 18:03:37,829 [WEB TEST INJ] host h4 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: DELETE must NOT work: 
+2019-05-17 18:03:38,844  OK!
+2019-05-17 18:03:38,846 [PING TEST] host h2 to server 100.0.0.20 must NOT work: 
+2019-05-17 18:03:39,857  OK!
+2019-05-17 18:03:39,858 [PING TEST] host h2 to server 100.0.0.21 must NOT work: 
+2019-05-17 18:03:40,869  OK!
+2019-05-17 18:03:40,870 [PING TEST] host h2 to server 100.0.0.22 must NOT work: 
+2019-05-17 18:03:41,881  OK!
+2019-05-17 18:03:41,882 [PING TEST] host h2 to server 100.0.0.40 must NOT work: 
+2019-05-17 18:03:42,894  OK!
+2019-05-17 18:03:42,894 [PING TEST] host h2 to server 100.0.0.41 must NOT work: 
+2019-05-17 18:03:43,906  OK!
+2019-05-17 18:03:43,906 [PING TEST] host h2 to server 100.0.0.42 must NOT work: 
+2019-05-17 18:03:44,918  OK!
+2019-05-17 18:03:44,919 [PING TEST] host h2 to LoadBalancer 100.0.0.45 must work: 
+2019-05-17 18:03:45,012  OK!
+2019-05-17 18:03:45,012 [PING TEST] host h2 to LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:03:45,104  OK!
+2019-05-17 18:03:45,104 [DNS TEST] host h2 to internal DNS 100.0.0.20 must NOT work: 
+2019-05-17 18:03:46,124  OK!
+2019-05-17 18:03:46,125 [DNS BOGUS TEST] host h2 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-05-17 18:03:47,140  OK!
+2019-05-17 18:03:47,140 [DNS TEST] host h2 to internal DNS 100.0.0.21 must NOT work: 
+2019-05-17 18:03:48,170  OK!
+2019-05-17 18:03:48,170 [DNS BOGUS TEST] host h2 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-05-17 18:03:49,200  OK!
+2019-05-17 18:03:49,200 [DNS TEST] host h2 to internal DNS 100.0.0.22 must NOT work: 
+2019-05-17 18:03:50,230  OK!
+2019-05-17 18:03:50,230 [DNS BOGUS TEST] host h2 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-05-17 18:03:51,259  OK!
+2019-05-17 18:03:51,259 [DNS TEST] host h2 to DNS LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:03:51,392  OK!
+2019-05-17 18:03:51,393 [DNS BOGUS TEST] internal h2 to internal DNS LoadBalancer port 5353 100.0.0.25 must NOT work: 
+2019-05-17 18:03:52,420  OK!
+2019-05-17 18:03:52,420 [WEB TEST] host h2 to internal WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:03:53,441  OK!
+2019-05-17 18:03:53,441 [WEB BOGUS TEST] host h2 to internal BOGUS WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:03:54,458  OK!
+2019-05-17 18:03:54,459 [WEB TEST] host h2 to internal WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:03:55,477  OK!
+2019-05-17 18:03:55,477 [WEB BOGUS TEST] host h2 to internal BOGUS WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:03:56,485  OK!
+2019-05-17 18:03:56,485 [WEB TEST] host h2 to internal WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:03:57,506  OK!
+2019-05-17 18:03:57,507 [WEB BOGUS TEST] host h2 to internal BOGUS WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:03:58,525  OK!
+2019-05-17 18:03:58,525 [WEB BOGUS TEST] host h2 to BOGUS WEB LoadBalancer 100.0.0.45 must NOT work: 
+2019-05-17 18:03:59,531  OK!
+2019-05-17 18:03:59,531 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP OPTIONS must NOT work: 
+2019-05-17 18:04:00,538  OK!
+2019-05-17 18:04:00,538 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP TRACE must NOT work: 
+2019-05-17 18:04:01,556  OK!
+2019-05-17 18:04:01,556 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP CONNECT must NOT work: 
+2019-05-17 18:04:02,562  OK!
+2019-05-17 18:04:02,563 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP DELETE must NOT work: 
+2019-05-17 18:04:03,583  OK!
+2019-05-17 18:04:03,583 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP HEAD must NOT work: 
+2019-05-17 18:04:04,600  OK!
+2019-05-17 18:04:04,600 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP GET must NOT work: 
+2019-05-17 18:04:05,617  OK!
+2019-05-17 18:04:05,617 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP POST must work: 
+2019-05-17 18:04:05,724  OK!
+2019-05-17 18:04:05,724 [WEB TEST] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT must work: 
+2019-05-17 18:04:05,786  OK!
+2019-05-17 18:04:05,786 [WEB TEST INJ] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /etc/passwd must NOT work: 
+2019-05-17 18:04:06,802  OK!
+2019-05-17 18:04:06,802 [WEB TEST INJ] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /var/log/ must NOT work: 
+2019-05-17 18:04:07,818  OK!
+2019-05-17 18:04:07,819 [WEB TEST INJ] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: INSERT must NOT work: 
+2019-05-17 18:04:08,834  OK!
+2019-05-17 18:04:08,834 [WEB TEST INJ] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: UPDATE must NOT work: 
+2019-05-17 18:04:09,845  OK!
+2019-05-17 18:04:09,845 [WEB TEST INJ] host h2 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: DELETE must NOT work: 
+2019-05-17 18:04:10,856  OK!
+2019-05-17 18:04:10,856 [PING TEST] host h1 to server 100.0.0.20 must NOT work: 
+2019-05-17 18:04:11,860  OK!
+2019-05-17 18:04:11,861 [PING TEST] host h1 to server 100.0.0.21 must NOT work: 
+2019-05-17 18:04:12,873  OK!
+2019-05-17 18:04:12,873 [PING TEST] host h1 to server 100.0.0.22 must NOT work: 
+2019-05-17 18:04:13,884  OK!
+2019-05-17 18:04:13,884 [PING TEST] host h1 to server 100.0.0.40 must NOT work: 
+2019-05-17 18:04:14,896  OK!
+2019-05-17 18:04:14,896 [PING TEST] host h1 to server 100.0.0.41 must NOT work: 
+2019-05-17 18:04:15,900  OK!
+2019-05-17 18:04:15,900 [PING TEST] host h1 to server 100.0.0.42 must NOT work: 
+2019-05-17 18:04:16,912  OK!
+2019-05-17 18:04:16,913 [PING TEST] host h1 to LoadBalancer 100.0.0.45 must work: 
+2019-05-17 18:04:17,000  OK!
+2019-05-17 18:04:17,001 [PING TEST] host h1 to LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:04:17,064  OK!
+2019-05-17 18:04:17,064 [DNS TEST] host h1 to internal DNS 100.0.0.20 must NOT work: 
+2019-05-17 18:04:18,077  OK!
+2019-05-17 18:04:18,078 [DNS BOGUS TEST] host h1 to internal DNS port 5353 100.0.0.20 must NOT work: 
+2019-05-17 18:04:19,104  OK!
+2019-05-17 18:04:19,105 [DNS TEST] host h1 to internal DNS 100.0.0.21 must NOT work: 
+2019-05-17 18:04:20,134  OK!
+2019-05-17 18:04:20,135 [DNS BOGUS TEST] host h1 to internal DNS port 5353 100.0.0.21 must NOT work: 
+2019-05-17 18:04:21,164  OK!
+2019-05-17 18:04:21,165 [DNS TEST] host h1 to internal DNS 100.0.0.22 must NOT work: 
+2019-05-17 18:04:22,193  OK!
+2019-05-17 18:04:22,194 [DNS BOGUS TEST] host h1 to internal DNS port 5353 100.0.0.22 must NOT work: 
+2019-05-17 18:04:23,223  OK!
+2019-05-17 18:04:23,223 [DNS TEST] host h1 to DNS LoadBalancer 100.0.0.25 must work: 
+2019-05-17 18:04:23,339  OK!
+2019-05-17 18:04:23,340 [DNS BOGUS TEST] internal h1 to internal DNS LoadBalancer port 5353 100.0.0.25 must NOT work: 
+2019-05-17 18:04:24,369  OK!
+2019-05-17 18:04:24,369 [WEB TEST] host h1 to internal WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:04:25,377  OK!
+2019-05-17 18:04:25,377 [WEB BOGUS TEST] host h1 to internal BOGUS WEB 100.0.0.40 must NOT work: 
+2019-05-17 18:04:26,396  OK!
+2019-05-17 18:04:26,397 [WEB TEST] host h1 to internal WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:04:27,415  OK!
+2019-05-17 18:04:27,415 [WEB BOGUS TEST] host h1 to internal BOGUS WEB 100.0.0.41 must NOT work: 
+2019-05-17 18:04:28,433  OK!
+2019-05-17 18:04:28,434 [WEB TEST] host h1 to internal WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:04:29,452  OK!
+2019-05-17 18:04:29,452 [WEB BOGUS TEST] host h1 to internal BOGUS WEB 100.0.0.42 must NOT work: 
+2019-05-17 18:04:30,470  OK!
+2019-05-17 18:04:30,470 [WEB BOGUS TEST] host h1 to BOGUS WEB LoadBalancer 100.0.0.45 must NOT work: 
+2019-05-17 18:04:31,489  OK!
+2019-05-17 18:04:31,490 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP OPTIONS must NOT work: 
+2019-05-17 18:04:32,510  OK!
+2019-05-17 18:04:32,510 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP TRACE must NOT work: 
+2019-05-17 18:04:33,529  OK!
+2019-05-17 18:04:33,530 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP CONNECT must NOT work: 
+2019-05-17 18:04:34,544  OK!
+2019-05-17 18:04:34,545 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP DELETE must NOT work: 
+2019-05-17 18:04:35,552  OK!
+2019-05-17 18:04:35,552 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP HEAD must NOT work: 
+2019-05-17 18:04:36,572  OK!
+2019-05-17 18:04:36,573 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP GET must NOT work: 
+2019-05-17 18:04:37,590  OK!
+2019-05-17 18:04:37,590 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP POST must work: 
+2019-05-17 18:04:37,660  OK!
+2019-05-17 18:04:37,661 [WEB TEST] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT must work: 
+2019-05-17 18:04:37,725  OK!
+2019-05-17 18:04:37,725 [WEB TEST INJ] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /etc/passwd must NOT work: 
+2019-05-17 18:04:38,743  OK!
+2019-05-17 18:04:38,743 [WEB TEST INJ] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: cat /var/log/ must NOT work: 
+2019-05-17 18:04:39,759  OK!
+2019-05-17 18:04:39,759 [WEB TEST INJ] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: INSERT must NOT work: 
+2019-05-17 18:04:40,775  OK!
+2019-05-17 18:04:40,776 [WEB TEST INJ] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: UPDATE must NOT work: 
+2019-05-17 18:04:41,792  OK!
+2019-05-17 18:04:41,792 [WEB TEST INJ] host h1 to  WEB LoadBalancer 100.0.0.45 HTTP PUT inj: DELETE must NOT work: 
+2019-05-17 18:04:42,803  OK!
+2019-05-17 18:04:42,803 #################### NOW TESTING FROM THE EXTERNAL ####################
+2019-05-17 18:04:42,803 [PING TEST] external h2 to external 10.0.0.50 must NOT work: 
+2019-05-17 18:04:42,807  OK!
+2019-05-17 18:04:42,808 [PING TEST] external h2 to external 10.0.0.51 must NOT work: 
+2019-05-17 18:04:42,811  OK!
+2019-05-17 18:04:42,811 [PING TEST] external h1 to external 10.0.0.50 must NOT work: 
+2019-05-17 18:04:42,815  OK!
+2019-05-17 18:04:42,816 [PING TEST] external h1 to external 10.0.0.51 must NOT work: 
+2019-05-17 18:04:42,821  OK!
+2019-05-17 18:04:42,821 #################### NOW TESTING FROM THE INTERNAL ####################
+2019-05-17 18:04:42,821 [PING TEST] internal h3 to external h2 must work: 
+2019-05-17 18:04:42,994  OK!
+2019-05-17 18:04:42,995 [PING TEST] internal h3 to external h1 must work: 
+2019-05-17 18:04:43,138  OK!
+2019-05-17 18:04:43,138 [PING TEST] internal h4 to external h2 must work: 
+2019-05-17 18:04:43,145  OK!
+2019-05-17 18:04:43,145 [PING TEST] internal h4 to external h1 must work: 
+2019-05-17 18:04:43,153  OK!
+2019-05-17 18:04:43,153 
+RESULTS:
+2019-05-17 18:04:43,154 	TOTAL SCORE 151/152
+
+2019-05-17 18:04:43,154 ####### ENDING TESTS   #######  

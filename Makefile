@@ -7,8 +7,11 @@ topo:
 	cd topology/ && sudo make topo
 
 clean:
-	@echo "[MAKE] Killing pox.. $$(sudo kill -s SIGINT $$(echo $$(ps aux | grep pox | grep root | head -n 1 | awk '{print $$2}')) 2>/dev/null ; echo $$?)"
-	@sleep 1
-	@echo "[MAKE] Killing click.. $$(sudo pkill --signal SIGINT click; echo $$?)"
-	@echo "[MAKE] Killing sdn app.. $$(sudo kill -s SIGTERM $$(echo $$(ps aux | grep sdn | head -n 1 | awk '{print $$2}')); echo $$?)"
+	@echo -n "[MAKE] Killing POX..      " 
+	@(sudo kill -s SIGINT $$(ps aux | grep pox | grep root | head -n 1 | awk '{print $$2}') 2>/dev/null  && echo "OK") || echo "POX not running!"
+	@#([ $$(sudo kill -s SIGINT $$(ps aux | grep pox | grep root | head -n 1 | awk '{print $$2}') 2>/dev/null; echo $$?) -eq 0 ] && echo "yes" || echo "no")
+	@echo -n "[MAKE] Killing Click..    "
+	@sudo pkill --signal SIGINT click && echo "OK" || echo "Click not running!"
+	@echo -n "[MAKE] Killing SDN App..  "
+	@(sudo kill -s SIGTERM $$(ps aux | grep sdn | grep root | head -n 1 | awk '{print $$2}')  2>/dev/null && echo "OK") || echo "SDN not running!"
 	@cd topology/ && make clean
