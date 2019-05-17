@@ -197,7 +197,7 @@ if __name__ == "__main__":
 	#### TEST
 	################
 	info("####### STARTING TESTS #######  ")
-	
+	sleep(1)
 	total_run = 0
 	total_ok = 0
 
@@ -221,10 +221,6 @@ if __name__ == "__main__":
 	for h in all_hosts_obj:
 		h = net.get(h)
 		
-		for test_ip in all_servers:
-			info("[PING TEST] host {} to server {} must NOT work: ".format( h, test_ip)),
-			res = int(h.cmd('ping -c 1 -W 1 {}'.format(test_ip) + ' > /dev/null; echo $?'))
-			info( ok() if res != 0 else err() )
 
 		for lb_ip in [srv_list["web_lb"], srv_list["dns_lb"]]:
 			info("[PING TEST] host {} to LoadBalancer {} must work: ".format( h, lb_ip)),
@@ -232,6 +228,10 @@ if __name__ == "__main__":
 			print('ping -c 1 -W 1 {}'.format(lb_ip) + ' > /dev/null; echo $?')
 			info( ok() if res == 0 else err() )
 
+		for test_ip in all_servers:
+			info("[PING TEST] host {} to server {} must NOT work: ".format( h, test_ip)),
+			res = int(h.cmd('ping -c 1 -W 1 {}'.format(test_ip) + ' > /dev/null; echo $?'))
+			info( ok() if res != 0 else err() )
 		### DNS TESTING
 		for dns_ip in srv_list["dns"]:
 			info("[DNS TEST] host {} to internal DNS {} must NOT work: ".format( h, dns_ip)),
