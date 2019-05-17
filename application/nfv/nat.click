@@ -1,7 +1,5 @@
 define ($sw_int_ip 10.0.0.1,
-		//$int_if sw1-eth2,
 		$sw_ext_ip 100.0.0.1,
-		//$ext_if sw1-eth1
 		)
 
 AddressInfo(

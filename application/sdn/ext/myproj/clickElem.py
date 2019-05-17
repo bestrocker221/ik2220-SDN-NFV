@@ -8,7 +8,7 @@ from pox.lib.addresses import IPAddr
 import subprocess
 
 log = core.getLogger()
-import shlex
+import shlex, os, signal
 
 #
 # My click router component
@@ -49,5 +49,9 @@ class click_device (object):
 
 	def _handle_ConnectionDown(self, event):
 		if event.dpid in self.clicks_dpids:
+			# NOTHING WORK HERE TO SIGINT THE CLICK PROCESS, MUST DO ON THE MAKEFILE
 			#self.click_proc.terminate()
+			#pid = self.click_proc.pid
+			#os.kill(pid, signal.SIGINT)
+			#self.click_proc.send_signal(signal.SIGINT)
 			log.debug("[CLICK: {}] Terminating..".format(event.dpid))

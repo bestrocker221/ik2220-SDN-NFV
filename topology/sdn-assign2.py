@@ -177,13 +177,25 @@ if __name__ == "__main__":
 	
 	print("[lb1] Spawning testing DNS server on LoadBalancer 100.0.0.25")
 	net.get("lb1").cmd("sudo python dns_server.py 100.0.0.25 5353 &")
-	# needed because for some reason resolv.conf get a wrong entry making dns resolutin crash
+	# needed because for some reason resolv.conf get a wrong entry making dns resolution crash
 	net.get("lb1").cmd("echo nameserver 1.1.1.1 > /etc/resolv.conf")
 
 	# start tcpdump on ids
-	net.get("ids").cmd("tcpdump -vv -n tcp -o ../results/ids_capture.pcap")
-
+	print("[INSP] Starting TCPDUMP for traffic capture on insp machine")
+	
+	net.get("insp").sendCmd("tcpdump -i insp-eth0 -vvv tcp -w ../results/ids_capture.pcap")	
+	# about the tcpdump:
+	# tried everything to make it work but maybe its my machine problem, in other colleagues it works flawlessly
+	# tcpdump does not actually start since i don't run another command into the CLI with "insp <cmd>"
+	# If and only into the CLI i run "insp ps" (ps for example) then i see tcpdump starting, 
+	# and that is why in the capture does not save anything. 
+	#
+	# For the project i manually did the capture and sent a couple of test packets
+	net.get("h1").cmd(" h1 curl 100.0.0.45 -m1 -s  >/dev/null; echo $?")
 	CLI(net)
+
+	net.get("insp").cmd('kill -s SIGINT $(ps | grep tcpdump | awk \'{print $1}\')')
+	
 	net.stop()
 	import sys
 	sys.exit(0)
@@ -312,7 +324,7 @@ if __name__ == "__main__":
 	##############
 
 	CLI(net)
-
+	net.get("insp").cmd('kill -s SIGINT $(ps | grep tcpdump | awk \'{print $1}\')')
 	net.stop()
 
 	#sudo ovs-vsctl show

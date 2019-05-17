@@ -1,8 +1,0 @@
-2019-05-15 16:29:06,614 ####### STARTING TESTS #######  
-2019-05-15 16:29:06,614 [PING TEST] external h2 to internal 100.0.0.51 must NOT work: 
-2019-05-15 16:29:07,621  OK!
-2019-05-15 16:29:07,622 [PING TEST] external h2 to internal 100.0.0.52 must NOT work: 
-2019-05-15 16:29:08,635  OK!
-2019-05-15 16:29:08,636 [PING TEST] external h2 to internal 100.0.0.42 must NOT work: 
-2019-05-15 16:29:09,649  OK!
-2019-05-15 16:29:09,649 [PING TEST] external h2 to internal 100.0.0.41 must NOT work: 

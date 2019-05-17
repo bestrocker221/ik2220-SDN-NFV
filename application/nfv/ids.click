@@ -1,15 +1,3 @@
-define (//$sw_int_ip 10.0.0.1,
-		//$sw_ext_ip 100.0.0.1,
-		//$int_if sw1-eth2,
-		//$ext_if sw1-eth1
-		)
-
-//AddressInfo(
-//	DmZ		$sw_ext_ip $ext_if,
-//	PrZ		$sw_int_ip $int_if,
-//);
-
-
 // 1 in, 2 out
 counter_in1, counter_in2, counter_out1, counter_out2 :: AverageCounter;
 arp_1, ip1 :: Counter;
